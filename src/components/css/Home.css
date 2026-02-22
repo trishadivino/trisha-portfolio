@@ -1,0 +1,91 @@
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 55px; /* leave space for navbar */
+  background: #053a3e;
+  background-image: url("data:image/svg+xml,%3Csvg width='1600' height='600' viewBox='0 0 1600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 200 Q400 100 800 200 T1600 200 V600 H0 Z' fill='%2300a093' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Home Content */
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+.home-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #a0e0d8;
+}
+
+.home-text p {
+  margin-bottom: 1.5rem;
+  color: #c0e8e5;
+}
+
+.cv-btn {
+  padding: 0.65rem 1.3rem;
+  border: none;
+  background-color: #0dd6c0;
+  color: #011f21;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background-color: #0bb3a7;
+}
+
+/* Home Image (Hexagon) */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  clip-path: polygon(
+    25% 5%, 75% 5%, 95% 50%, 
+    75% 95%, 25% 95%, 5% 50%
+  ); /* hexagon shape */
+  border: 3px solid #0dd6c0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-image {
+    margin-bottom: 2rem;
+  }
+}

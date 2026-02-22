@@ -1,0 +1,61 @@
+/* Contact Section - styled similar to About */
+.contact-section {
+  margin-top: 0;
+  scroll-margin-top: 80px; /* Adjust if your navbar height is different */
+  min-height: 40vh;
+  padding: 60px 2rem 2rem;
+  background: #053a3e;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1600 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 Q400 200 800 120 T1600 150 V0 H0 Z' fill='%2300a093' opacity='0.25'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #c0e8e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.contact-list li {
+  font-size: 1.1rem;
+  background: rgba(0, 160, 147, 0.13);
+  padding: 0.8rem 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,160,147,0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.contact-list a {
+  color: #00f0c0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}

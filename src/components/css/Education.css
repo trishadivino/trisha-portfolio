@@ -1,0 +1,115 @@
+.education-section {
+  padding: 60px 2rem 4rem;
+  background: #053a3e;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #c0e8e5;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #00a093;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #00a093;
+  border: 4px solid #fff;
+  top: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+  right: auto;
+}
+
+.timeline-content {
+  background-color: rgba(0, 160, 147, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 160, 147, 0.3);
+  color: #c0e8e5;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content .school {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content .years {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content .note {
+  font-weight: bold;
+  color: #00f0c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: left !important;
+  }
+
+  .timeline-item::before {
+    left: -10px !important;
+  }
+}

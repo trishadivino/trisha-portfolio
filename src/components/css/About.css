@@ -1,0 +1,123 @@
+/* General About Section */
+.about-section {
+  margin-top: 40px; 
+  min-height: 100vh;
+  padding: 60px 2rem 2rem;
+  background: #053a3e;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1600 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 Q400 200 800 120 T1600 150 V0 H0 Z' fill='%2300a093' opacity='0.25'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  color: #c0e8e5;
+}
+
+/* Two-column layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Tech Stack */
+.tech-category {
+  margin-bottom: 1.5rem;
+}
+
+.with-border {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.category-title {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Logo Grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 12px;
+  justify-items: center;
+}
+
+.tech-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(13, 214, 192, 0.1);
+  border: 1px solid rgba(13, 214, 192, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.tech-logo-container:hover {
+  background-color: rgba(64, 229, 210, 0.2);
+  border-color: rgba(13, 214, 192, 0.5);
+  transform: translateY(-2px);
+}
+
+.tech-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #0dd6c0);
+}
+
+/* Soft Skills */
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.skills-list li::before {
+  content: "○";
+  color: #fff;
+  font-weight: bold;
+  margin-top: 2px;
+}
