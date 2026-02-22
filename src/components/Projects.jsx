@@ -7,7 +7,7 @@ const projectData = [
     description: "Developed a system to manage book transactions, user accounts, fines, and inventory. Features include tracking borrowed, returned, damaged, and lost books, automated report generation, and payment processing.",
     tech: "Laravel",
     status: "Completed",
-    image: "src/images/lms.png"
+    image: "/lms.png"
   },
   {
     title: "Error Registry System",
@@ -15,7 +15,7 @@ const projectData = [
     description: "Created a centralized library for technical and software issues. Support teams can log errors and attach instructions, PDFs, videos, or executables, making it easy to reference previous solutions.",
     tech: "Laravel",
     status: "Ongoing",
-    image: "src/images/ers.png"
+    image: "/ers.png"
   },
   {
     title: "Shipyard Management System",
@@ -23,7 +23,7 @@ const projectData = [
     description: "Streamlines shipyard operations by managing vessels, projects, tasks, inventory, and financials. Enables efficient planning, resource tracking, and faster project completion.",
     tech: "VB6",
     status: "Ongoing",
-    image: "src/images/lms.png"
+    image: "/zenitsu.png"
   },
   {
     title: "Task Management System",
@@ -31,7 +31,7 @@ const projectData = [
      description: "Tracks daily tasks and project timelines. Supervisors can assign tasks, monitor progress via calendar views, and ensure employees stay on schedule. Planned integration with Error Registry System.",
     tech: "Laravel",
     status: "Ongoing",
-    image: "src/images/lms.png"
+    image: "/waves.jpg"
   },
   {
     title: "Sales Management System",
@@ -39,7 +39,7 @@ const projectData = [
     description: "A system for small businesses to manage inventory and sales, keeping track of stock and transactions. Planned for future development.",
     tech: "Laravel",
     status: "Planned",
-    image: "src/images/lms.png"
+    image: "/zoro.jpg"
   },
 ];
 
