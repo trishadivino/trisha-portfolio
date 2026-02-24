@@ -1,0 +1,86 @@
+.experience-section {
+  padding: 60px 2rem 4rem;
+  background: #053a3e;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #c0e8e5;
+}
+
+/* 2 Column Grid */
+.experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.experience-card {
+  background: rgba(0, 160, 147, 0.08);
+  border: 1px solid rgba(0, 160, 147, 0.3);
+  border-radius: 14px;
+  padding: 1.8rem;
+  color: #c0e8e5;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 240, 192, 0.15);
+}
+
+/* Header */
+.experience-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  font-size: 1.3rem;
+}
+
+.years {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #00f0c0;
+}
+
+/* Company */
+.company {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.address {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Duties */
+.duties {
+  padding-left: 1.2rem;
+  text-align: left;
+}
+
+.duties li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+}

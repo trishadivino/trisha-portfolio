@@ -8,6 +8,7 @@ function About() {
             { name: "HTML5", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
             { name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
             { name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { name: "Tailwind CSS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },            
             { name: "PHP", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
             { name: "Laravel", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
             { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -28,13 +29,13 @@ function About() {
     "First-line technical support",
     "Requirement gathering & documentation",
     "Legacy system stabilization & migration",
-    "Internal tool development (Error Registry, Task Management System)",
+    "Internal tool development (Error Registry System, Task Management System)",
     "Team mentoring & coordination"
   ];
 
   return (
     <section id="about" className="about-section">
-      <h2 className="about-title">About Me</h2>
+      <h2 className="about-title">About Me | Skills</h2>
       <p className="about-description">
         Highly motivated IT professional with experience in system support, implementation, and software development. Skilled in managing SME systems, leading implementation teams, stabilizing legacy systems, and developing internal tools. Seeking to leverage technical expertise and problem-solving abilities to contribute to innovative software projects and grow as a full-stack developer.
       </p>

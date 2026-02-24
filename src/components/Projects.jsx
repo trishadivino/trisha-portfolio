@@ -18,12 +18,12 @@ const projectData = [
     image: "/ers.png"
   },
   {
-    title: "Shipyard Management System",
+    title: "Shipyard Enterprise System",
     role: "Company Project | Developer Collaborator",
     description: "Streamlines shipyard operations by managing vessels, projects, tasks, inventory, and financials. Enables efficient planning, resource tracking, and faster project completion.",
     tech: "VB6",
-    status: "Ongoing",
-    image: "/zenitsu.png"
+    status: "Stabilization Phase",
+    image: "/ses1.jpeg"
   },
   {
     title: "Task Management System",
@@ -82,6 +82,8 @@ export default function Projects() {
                         ? " ongoing"
                         : proj.status === "Planned"
                         ? " planned"
+                        : proj.status === "Stabilization Phase"
+                        ? " stabilization"
                         : ""
                     }`}
                   >
