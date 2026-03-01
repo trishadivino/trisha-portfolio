@@ -31,7 +31,7 @@ const projectData = [
      description: "Tracks daily tasks and project timelines. Supervisors can assign tasks, monitor progress via calendar views, and ensure employees stay on schedule. Planned integration with Error Registry System.",
     tech: "Laravel",
     status: "Ongoing",
-    image: "/waves.jpg"
+    image: "/tms.png"
   },
   {
     title: "Sales Management System",
