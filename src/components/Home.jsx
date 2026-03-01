@@ -47,7 +47,7 @@ function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/trisha-mae-hernando-divino-a63103354?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              href="https://www.linkedin.com/in/trisha-mae-hernando-divino-a63103354/"
               target="_blank"
               rel="noopener noreferrer"
             >

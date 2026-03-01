@@ -3,7 +3,7 @@ import "./css/Projects.css";
 const projectData = [
   {
     title: "Library Management System",
-    role: "Personal Project |Main Developer",
+    role: "Freelance Project |Main Developer",
     description: "Developed a system to manage book transactions, user accounts, fines, and inventory. Features include tracking borrowed, returned, damaged, and lost books, automated report generation, and payment processing.",
     tech: "Laravel",
     status: "Completed",
