@@ -140,12 +140,10 @@
 
 .tech-label {
   display: inline-block;
-  background-color: rgba(0, 160, 147, 0.2);
-  color: #00f0c0;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
   font-size: 0.85rem;
-  font-weight: 500;
+  color: #aaa;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 
 .status-badge {
@@ -157,6 +155,8 @@
   font-size: 0.85rem;
   font-weight: 500;
   border: 1px solid rgba(0, 240, 192, 0.3);
+  margin-top: 10px;
+  margin-bottom: 6px;
 }
 
 /* Completed badge style */

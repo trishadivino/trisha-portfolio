@@ -3,9 +3,9 @@ import "./css/Projects.css";
 const projectData = [
   {
     title: "Library Management System",
-    role: "Freelance Project |Main Developer",
+    role: "School Project | Main Developer",
     description: "Developed a system to manage book transactions, user accounts, fines, and inventory. Features include tracking borrowed, returned, damaged, and lost books, automated report generation, and payment processing.",
-    tech: "Laravel",
+    tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
     status: "Completed",
     image: "/lms.png"
   },
@@ -13,7 +13,7 @@ const projectData = [
     title: "Error Registry System",
     role: "Company Project | Main Developer",
     description: "Created a centralized library for technical and software issues. Support teams can log errors and attach instructions, PDFs, videos, or executables, making it easy to reference previous solutions.",
-    tech: "Laravel",
+    tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
     status: "Ongoing",
     image: "/ers.png"
   },
@@ -21,7 +21,7 @@ const projectData = [
     title: "Shipyard Enterprise System",
     role: "Company Project | Developer Collaborator",
     description: "Streamlines shipyard operations by managing vessels, projects, tasks, inventory, and financials. Enables efficient planning, resource tracking, and faster project completion.",
-    tech: "VB6",
+    tech: "VB.NET",
     status: "Stabilization Phase",
     image: "/ses1.jpeg"
   },
@@ -29,7 +29,7 @@ const projectData = [
     title: "Task Management System",
     role: "Company Project | Intern Supervisor",
      description: "Tracks daily tasks and project timelines. Supervisors can assign tasks, monitor progress via calendar views, and ensure employees stay on schedule. Planned integration with Error Registry System.",
-    tech: "Laravel",
+    tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
     status: "Ongoing",
     image: "/tms.png"
   },
@@ -37,7 +37,7 @@ const projectData = [
     title: "Sales Management System",
     role: "Personal Project | Main Developer",
     description: "A system for small businesses to manage inventory and sales, keeping track of stock and transactions. Planned for future development.",
-    tech: "Laravel",
+    tech: "React, Next.js, Tailwind CSS, Laravel (REST API), MySQL",
     status: "Planned",
     image: "/zoro.jpg"
   },
@@ -72,23 +72,27 @@ export default function Projects() {
                 <h3>{proj.title}</h3>
                 <span className="role-badge">{proj.role}</span>
                 <p className="description">{proj.description}</p>
-                <div className="project-footer">
-                  <span className="tech-label">{proj.tech}</span>
-                  <span
-                    className={`status-badge${
-                      proj.status === "Completed"
-                        ? " completed"
-                        : proj.status === "Ongoing"
-                        ? " ongoing"
-                        : proj.status === "Planned"
-                        ? " planned"
-                        : proj.status === "Stabilization Phase"
-                        ? " stabilization"
-                        : ""
-                    }`}
-                  >
-                    {proj.status}
-                  </span>
+
+                {/* Status first */}
+                <span
+                  className={`status-badge${
+                    proj.status === "Completed"
+                      ? " completed"
+                      : proj.status === "Ongoing"
+                      ? " ongoing"
+                      : proj.status === "Planned"
+                      ? " planned"
+                      : proj.status === "Stabilization Phase"
+                      ? " stabilization"
+                      : ""
+                  }`}
+                >
+                  {proj.status}
+                </span>
+
+                {/* Tech stack below */}
+                <div className="tech-label">
+                  <strong>Tech Stack:</strong> {proj.tech}
                 </div>
               </div>
             </div>
