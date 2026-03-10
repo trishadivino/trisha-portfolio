@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -51,6 +58,17 @@ body, html {
   background-color: #053a3e; /* dark teal base */
   scroll-behavior: smooth;
   color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+/* Base mobile styles */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Slim Navbar */
@@ -86,6 +104,60 @@ body, html {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 101;
+  padding: 0.5rem;
+}
+
+.hamburger:hover {
+  color: #0dd6c0;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 55px;
+    flex-direction: column;
+    background-color: #011f21;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  .navbar .nav-links.nav-active {
+    left: 0;
+  }
+
+  .navbar .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
 }
 
 .navbar .social-icons {

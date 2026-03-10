@@ -59,3 +59,50 @@
   font-size: 1.3rem;
   vertical-align: middle;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 1rem 2rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-list {
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .contact-list li {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-list li {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-icon {
+    font-size: 1.1rem;
+  }
+}

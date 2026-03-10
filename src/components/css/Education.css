@@ -102,14 +102,80 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .education-section {
+    padding: 60px 1rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding: 0 0.5rem;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+
   .timeline-item {
     width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 1rem;
     text-align: left !important;
   }
 
   .timeline-item::before {
-    left: -10px !important;
+    left: 10px !important;
+    right: auto;
+  }
+
+  .timeline-content {
+    padding: 0.8rem 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content .school,
+  .timeline-content .years,
+  .timeline-content .note {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+
+  .timeline::after {
+    left: 15px;
+  }
+
+  .timeline-item::before {
+    left: 8px !important;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-content {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content .school,
+  .timeline-content .years,
+  .timeline-content .note {
+    font-size: 0.85rem;
   }
 }

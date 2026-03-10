@@ -84,3 +84,70 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 1rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .experience-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .years {
+    font-size: 0.85rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .address {
+    font-size: 0.85rem;
+  }
+
+  .duties li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .years {
+    font-size: 0.8rem;
+  }
+
+  .company {
+    font-size: 0.95rem;
+  }
+
+  .address {
+    font-size: 0.8rem;
+  }
+
+  .duties li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}

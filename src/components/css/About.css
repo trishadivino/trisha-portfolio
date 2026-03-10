@@ -121,3 +121,67 @@
   font-weight: bold;
   margin-top: 2px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 1rem 2rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 8px;
+  }
+
+  .tech-logo-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-list {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .tech-logo-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 6px;
+  }
+}

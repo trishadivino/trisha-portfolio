@@ -204,3 +204,121 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 1rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-nav {
+    gap: 1rem;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+
+  .carousel {
+    width: calc(1 * 350px + 1rem);
+    gap: 1rem;
+  }
+
+  .project-card {
+    flex: 0 0 350px;
+    min-height: 500px;
+  }
+
+  .project-image {
+    height: 200px;
+    margin-top: 1rem;
+  }
+
+  .project-content {
+    padding: 0.8rem;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .role-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    width: 90%;
+  }
+
+  .description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-indent: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .tech-label,
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .carousel-nav {
+    gap: 0.5rem;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .carousel {
+    width: calc(1 * 300px + 0.5rem);
+    gap: 0.5rem;
+  }
+
+  .project-card {
+    flex: 0 0 300px;
+    min-height: 450px;
+  }
+
+  .project-image {
+    height: 180px;
+    width: 90%;
+  }
+
+  .project-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .role-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    text-indent: 1rem;
+  }
+
+  .tech-label,
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
