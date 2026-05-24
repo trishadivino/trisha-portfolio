@@ -35,7 +35,7 @@ function Home() {
           <div className="home-buttons">
             <button
               className="cv-btn"
-              onClick={() => window.open('/DIVINO, TRISHA MAE H..pdf')}
+              onClick={() => window.open('/TRISHA MAE H. DIVINO_RESUME.pdf')}
             >
               Download CV
             </button>
