@@ -66,6 +66,35 @@
   opacity: 0.8;
 }
 
+
+
+.role-summary {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #a0d8d2;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.exp-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.exp-tech-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(13, 214, 192, 0.15);
+  color: #0dd6c0;
+  border: 1px solid rgba(13, 214, 192, 0.3);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 /* Duties */
 .duties {
   padding-left: 1.2rem;

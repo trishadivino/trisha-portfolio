@@ -86,9 +86,37 @@ img {
   z-index: 100;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-.navbar .logo-placeholder {
-  width: 40px;  /* reserve space for logo if needed */
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.navbar .navbar-logo:hover {
+  opacity: 0.85;
+}
+
+.navbar .navbar-logo img {
+  width: 40px;
   height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #0dd6c0;
+}
+
+@media (max-width: 480px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
 }
 
 /* Navbar Links */

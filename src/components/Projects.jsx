@@ -1,45 +1,190 @@
 import "./css/Projects.css";
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
 
 const projectData = [
   {
-    title: "Library Management System",
-    role: "School Project | Main Developer",
-    description: "Developed a system to manage book transactions, user accounts, fines, and inventory. Features include tracking borrowed, returned, damaged, and lost books, automated report generation, and payment processing.",
+    title: "Digital Library System",
+    role: "Capstone Enhancement Project | Main Developer",
+    description: "Enhanced and modernized a capstone-based Library Management System into a highly scalable institutional platform focused on circulation, inventory, borrower management, financial tracking, and administrative oversight. Engineered to simulate real-world library operations with granular role-based staff access and comprehensive operational monitoring capabilities.",
     tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
     status: "Completed",
-    image: "/lms.png"
+    image: "/lms-1.png",
+    gallery: [
+      "/lms-1.png",
+      "/lms-2.png",
+      "/lms-3.png",
+      "/lms-4.png",
+      "/lms-5.png",
+      "/lms-6.png",
+      "/lms-7.png",
+      "/lms-8.png",
+      "/lms-9.png",
+      "/lms-10.png",
+      "/lms-11.png",
+      "/lms-12.png"
+    ],
+    features: [
+      "Inventory & Collection Management - Complete cataloging and organization of library materials",
+      "Circulation Tracking - Monitor borrowed, returned, overdue, lost, and damaged items with real-time status",
+      "Borrower Account & History Management - Comprehensive member profiles with transaction history",
+      "Financial Tracking - Automated fine calculations and payment obligation management",
+      "Audit Logging - Administrative accountability with detailed activity logs",
+      "Role-Based Access Control - Granular permission system for staff and administrators",
+      "Automated Reporting & Analytics - Data-driven insights and operational reports with Chart.js visualizations",
+      "Advanced Search & Filtering - Powerful library record search capabilities",
+      "PDF Export & Barcode Generation - Generate reports and item barcodes for circulation",
+      "Excel Import/Export - Bulk data management capabilities"
+    ],
+    responsibilities: [
+      "Designed and implemented the complete relational database schema with optimized queries",
+      "Developed all core features including transaction management and circulation workflows",
+      "Built the comprehensive admin dashboard for library staff and administrators",
+      "Implemented automated fine calculation system with payment tracking",
+      "Created sophisticated report generation module with multiple export formats",
+      "Architected role-based access control system for multi-level user management",
+      "Integrated PDF generation for documents and barcode generation for items"
+    ],
+    impact: "Transformed a capstone project into a production-ready institutional platform that simulates real-world library operations with improved circulation monitoring, streamlined operational reporting, enhanced administrative control, and better borrower management workflows.",
+    metrics: [
+      { value: "10+", label: "Core Features" },
+      { value: "15+", label: "Database Tables" },
+      { value: "3", label: "User Roles" },
+      { value: "5+", label: "Report Types" },
+      { value: "3", label: "Months Dev Time" }
+    ],
+    techStack: [
+      { name: "PHP 8.2+", category: "language" },
+      { name: "Laravel 12.0", category: "framework" },
+      { name: "phpMyAdmin", category: "database" },
+      { name: "Blade", category: "frontend" },
+      { name: "Tailwind CSS 3.1.0", category: "frontend" },
+      { name: "Alpine.js 3.4.2", category: "frontend" },
+      { name: "JavaScript", category: "language" },
+      { name: "Chart.js 4.5.1", category: "tool" },
+      { name: "Laravel Breeze 2.3", category: "tool" },
+      { name: "DomPDF 3.1", category: "tool" },
+      { name: "Blade Heroicons 2.6", category: "tool" },
+      { name: "Maatwebsite Excel 3.1", category: "tool" },
+      { name: "Milon Barcode 12.0", category: "tool" },
+      { name: "Vite 7.0.7", category: "tool" },
+      { name: "Laravel Pint 1.24", category: "tool" },
+      { name: "PHPUnit 11.5.3", category: "tool" },
+      { name: "Laravel Sail 1.41", category: "tool" }
+    ]
   },
   {
-    title: "Error Registry System",
-    role: "Company Project | Main Developer",
-    description: "Created a centralized library for technical and software issues. Support teams can log errors and attach instructions, PDFs, videos, or executables, making it easy to reference previous solutions.",
-    tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
-    status: "Ongoing",
-    image: "/ers.png"
+    title: "Task Management System",
+    role: "Company Project | Team Lead | Mentor",
+    description: "An enterprise-grade task management platform for team collaboration, project tracking, and resource optimization. Built collaboratively under my technical mentorship, featuring workflow automation, real-time notifications, interactive Gantt and calendar visualizations, and intelligent task scheduling.",
+    tech: "PHP, Laravel, Tailwind CSS, MySQL, Alpine.js",
+    status: "Beta Testing",
+    credits: "Developed by OJT Interns - Junior Batch 2026 under my technical mentorship and supervision.",
+    image: "/tms-1.png",
+    gallery: [
+      "/tms-1.png",
+      "/tms-2.png",
+      "/tms-3.png",
+      "/tms-4.png",
+      "/tms-5.png",
+      "/tms-6.png",
+      "/tms-7.png",
+      "/tms-8.png",
+      "/tms-9.png",
+      "/tms-10.png",
+      "/tms-11.png",
+      "/tms-12.png"
+    ],
+    features: [
+      "Task Creation & Assignment Management",
+      "Project & Client Management",
+      "Advanced Task Filtering & Search",
+      "Multi-Status Workflow (To Do, In Progress, Completed, On Hold, Cancelled)",
+      "Priority-Based Task Prioritization",
+      "Real-Time Notifications & Activity Tracking",
+      "Interactive Gantt Chart Visualization",
+      "Calendar & Timeline Views",
+      "Task Categorization & Tagging System",
+      "Role-Based Access Control",
+      "Time Tracking & Task Duration",
+      "Automated Dashboard Analytics",
+      "Advanced Reporting & Metrics",
+      "Personal Notes & Reminders"
+    ],
+    responsibilities: [
+      "Designed the complete database schema and overall system architecture",
+      "Trained OJT developers on Laravel fundamentals and best practices",
+      "Defined feature specifications and workflow logic for task management modules",
+      "Conducted system testing, debugging, and quality assurance",
+      "Documented adjustment requests from management and the ESS team",
+      "Reviewed code submissions and guided developers through implementation challenges",
+      "Coordinated between the OJT team, project manager, and end-users/department stakeholders."
+    ],
+    impact: "Successfully delivered a production-ready task management platform while mentoring junior developers, demonstrating both technical leadership and the ability to translate stakeholder requirements into a working system.",
+    metrics: [
+      { value: "14+", label: "Core Features" },
+      { value: "10+", label: "Database Tables" },
+      { value: "5", label: "Task Status Types" },
+      { value: "3", label: "Priority Levels" },
+      { value: "3", label: "User Roles" },
+      { value: "4", label: "Months Dev Time" }
+    ],
+    techStack: [
+      { name: "PHP 8.2+", category: "language" },
+      { name: "Laravel 12", category: "framework" },
+      { name: "MySQL", category: "database" },
+      { name: "Blade", category: "frontend" },
+      { name: "Tailwind CSS", category: "frontend" },
+      { name: "Alpine.js", category: "frontend" },
+      { name: "JavaScript", category: "language" },
+      { name: "Chart.js", category: "tool" },
+      { name: "FullCalendar.js", category: "tool" },
+      { name: "AJAX/Axios", category: "tool" },
+      { name: "Laravel Reverb", category: "tool" },
+      { name: "Laravel Breeze", category: "tool" },
+      { name: "Vite", category: "tool" },
+      { name: "Pest/PHPUnit", category: "tool" }
+    ]
   },
   {
     title: "Shipyard Enterprise System",
     role: "Company Project | Developer Collaborator",
-    description: "Streamlines shipyard operations by managing vessels, projects, tasks, inventory, and financials. Enables efficient planning, resource tracking, and faster project completion.",
-    tech: "VB.NET",
+    description: "An enterprise operations management system designed to support daily shipyard workflows across multiple branches. The platform manages vessel projects, job orders, inventory, procurement, financial operations, service tariffs, and wharf occupancy monitoring to streamline large-scale shipyard operations.",
+    tech: "VB.NET, .NET Framework, SQL Server",
     status: "Stabilization Phase",
-    image: "/ses1.jpeg"
-  },
-  {
-    title: "Task Management System",
-    role: "Company Project | Intern Supervisor",
-     description: "Tracks daily tasks and project timelines. Supervisors can assign tasks, monitor progress via calendar views, and ensure employees stay on schedule. Planned integration with Error Registry System.",
-    tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
-    status: "Ongoing",
-    image: "/tms.png"
-  },
-  {
-    title: "Sales Management System",
-    role: "Personal Project | Main Developer",
-    description: "A system for small businesses to manage inventory and sales, keeping track of stock and transactions. Planned for future development.",
-    tech: "React, Next.js, Tailwind CSS, Laravel (REST API), MySQL",
-    status: "Planned",
-    image: "/zoro.jpg"
+    image: "/ses1.jpeg",
+    gallery: ["/ses1.jpeg", "/ses2.jpeg"],
+    features: [
+      "Vessel registry and operational tracking",
+      "Ship work project management with ISO-related documentation workflows",
+      "Job Order (JO) processing for materials and services",
+      "Tariff management for shipyard service operations",
+      "Inventory and masterfile management for consumables, assets, and office supplies",
+      "Procurement workflows including PO, PR, delivery, and transfer management",
+      "Financial operation support modules",
+      "Wharfage board monitoring for vessel docking visibility",
+      "Multi-branch operational support"
+    ],
+    responsibilities: [
+      "Developed the Tariff Registry and maintenance forms",
+      "Implemented Vessel Registry and management forms",
+      "Developed project creation and project management modules",
+      "Currently developing the Wharfage monitoring module",
+      "Conducted user training and system walkthroughs for operational staff",
+      "Assisted users during onboarding and feature adoption",
+      "Collaborated with the lead developer on operational workflows and system stabilization",
+      "Participated in testing, debugging, and feature refinement"
+    ],
+    impact: "Supports real-world shipyard operational workflows by centralizing vessel management, procurement, service processing, inventory monitoring, and project coordination across multiple branches.",
+    metrics: [
+      { value: "9+", label: "Core Modules" },
+      { value: "Multi", label: "Branch Support" },
+      { value: "4", label: "Modules Developed" }
+    ],
+    techStack: [
+      { name: "VB.NET", category: "language" },
+      { name: "SQL Yog", category: "database" }
+    ]
   },
 ];
 
@@ -47,12 +192,13 @@ import { useRef } from "react";
 
 export default function Projects() {
   const carouselRef = useRef(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const scrollCarousel = (direction) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
     const card = carousel.querySelector(".project-card");
-    const scrollAmount = card ? card.offsetWidth + 24 : 350; // 24px gap
+    const scrollAmount = card ? card.offsetWidth + 24 : 350;
     carousel.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -67,32 +213,36 @@ export default function Projects() {
         <div className="carousel" ref={carouselRef}>
           {projectData.map((proj, idx) => (
             <div key={idx} className="project-card">
-              <img src={proj.image} alt={proj.title} className="project-image" />
-              <div className="project-content">
-                <h3>{proj.title}</h3>
-                <span className="role-badge">{proj.role}</span>
-                <p className="description">{proj.description}</p>
+              <div className="project-card-left">
+                <img src={proj.image} alt={proj.title} className="project-image" />
+              </div>
+              <div className="project-card-right">
+                <div className="project-content">
+                  <h3>{proj.title}</h3>
+                  <span className="role-badge">{proj.role}</span>
+                  <p className="description">{proj.description}</p>
+                  
+                  <span className={`status-badge${proj.status === "Completed" ? " completed" : proj.status === "Ongoing" ? " ongoing" : proj.status === "Stabilization Phase" ? " stabilization" : ""}`}>
+                    {proj.status}
+                  </span>
 
-                {/* Status first */}
-                <span
-                  className={`status-badge${
-                    proj.status === "Completed"
-                      ? " completed"
-                      : proj.status === "Ongoing"
-                      ? " ongoing"
-                      : proj.status === "Planned"
-                      ? " planned"
-                      : proj.status === "Stabilization Phase"
-                      ? " stabilization"
-                      : ""
-                  }`}
-                >
-                  {proj.status}
-                </span>
+                  <div className="tech-badges">
+                    {proj.techStack && proj.techStack.slice(0, 4).map((tech, idx) => (
+                      <span key={idx} className={`tech-badge-mini ${tech.category}`}>
+                        {tech.name}
+                      </span>
+                    ))}
+                    {proj.techStack && proj.techStack.length > 4 && (
+                      <span className="tech-badge-mini more">+{proj.techStack.length - 4}</span>
+                    )}
+                  </div>
 
-                {/* Tech stack below */}
-                <div className="tech-label">
-                  <strong>Tech Stack:</strong> {proj.tech}
+                  <button 
+                    className="view-details-btn"
+                    onClick={() => setSelectedProject(proj)}
+                  >
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>
@@ -100,6 +250,14 @@ export default function Projects() {
         </div>
         <button className="carousel-btn right" onClick={() => scrollCarousel("right")}>{">"}</button>
       </div>
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </section>
   );
 }
+

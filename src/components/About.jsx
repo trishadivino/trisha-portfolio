@@ -23,21 +23,34 @@ function About() {
     }
   ];
 
-  const softSkills = [
+  const professionalSkills = [
     "System implementation and deployment",
     "Client onboarding & training",
     "First-line technical support",
     "Requirement gathering & documentation",
     "Legacy system stabilization & migration",
-    "Internal tool development (Error Registry System, Task Management System)",
+    "Internal tool development",
     "Team mentoring & coordination"
+  ];
+
+  const softSkills = [
+    "Problem-solving",
+    "Client communication",
+    "Team collaboration",
+    "Adaptability",
+    "Time management",
+    "Attention to detail"
   ];
 
   return (
     <section id="about" className="about-section">
       <h2 className="about-title">About Me | Skills</h2>
       <p className="about-description">
-        Highly motivated IT professional with experience in system support, implementation, and software development. Skilled in managing SME systems, leading implementation teams, stabilizing legacy systems, and developing internal tools. Seeking to leverage technical expertise and problem-solving abilities to contribute to innovative software projects and grow as a full-stack developer.
+        IT professional with experience in software support, system implementation, and web development. I bridge the gap between technical teams and end-users, ensuring smooth system deployments and resolving issues efficiently.
+
+        My background includes client onboarding, troubleshooting legacy systems, and developing internal tools using Laravel and PHP. I collaborate closely with development teams during testing and deployment, bringing both technical expertise and customer-facing skills to every project.
+
+        Seeking roles in software support or full-stack development where I can leverage my hybrid skill set to build reliable systems and deliver excellent user experiences.
       </p>
 
       <div className="about-content">
@@ -59,6 +72,16 @@ function About() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Middle Column: Professional Experience */}
+        <div className="soft-skills">
+          <h3 className="section-title">WORK SKILLS</h3>
+          <ul className="skills-list">
+            {professionalSkills.map((skill, idx) => (
+              <li key={idx}>{skill}</li>
+            ))}
+          </ul>
         </div>
 
         {/* Right Column: Soft Skills */}

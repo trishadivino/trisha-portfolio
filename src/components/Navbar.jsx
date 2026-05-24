@@ -12,7 +12,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className='logo-placeholder'></div>
+      <a href="#home" className="navbar-logo">
+        <img src="/devv-vision logo.png" alt="Devv-Vision Logo" />
+        <span className="navbar-brand">DEVV-VISION</span>
+      </a>
 
       {/* Hamburger Menu Button */}
       <button className="hamburger" onClick={toggleMenu}>

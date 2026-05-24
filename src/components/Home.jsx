@@ -10,22 +10,32 @@ function Home() {
         {/* Left side */}
         <div className="home-text">
           <h2></h2>
-          <h1>Trisha Mae H. Divino</h1>
+          <h1>TRISHA MAE H. DIVINO</h1>
 
           {/* Animated Role */}
           <h3 className="animated-role">
-            Technical Support | Junior Web Developer
+            Software Support | Junior Web Developer
           </h3>
 
           <p>
-            I’m an IT professional and junior web developer passionate about building efficient systems, improving legacy applications, and solving real-world technical problems through clean and practical solutions.
-          </p>
+           Software Support Engineer & Junior Web Developer with experience building scalable web applications and optimizing operational workflows using PHP/Laravel.
+           </p>
+
+          {/* Tech Stack */}
+          <div className="home-tech-stack">
+            <span className="tech-tag">PHP</span>
+            <span className="tech-tag">Laravel</span>
+            <span className="tech-tag">MySQL</span>
+            <span className="tech-tag">JavaScript</span>
+            <span className="tech-tag">Tailwind CSS</span>
+          </div>
+
 
           {/* Buttons */}
           <div className="home-buttons">
             <button
               className="cv-btn"
-              onClick={() => window.open('/Trisha_Divino_Resume.pdf')}
+              onClick={() => window.open('/DIVINO, TRISHA MAE H..pdf')}
             >
               Download CV
             </button>
@@ -75,3 +85,7 @@ function Home() {
 }
 
 export default Home
+
+
+
+
