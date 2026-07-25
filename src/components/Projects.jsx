@@ -9,6 +9,7 @@ const projectData = [
     description: "Enhanced and modernized a capstone-based Library Management System into a highly scalable institutional platform focused on circulation, inventory, borrower management, financial tracking, and administrative oversight. Engineered to simulate real-world library operations with granular role-based staff access and comprehensive operational monitoring capabilities.",
     tech: "PHP, Laravel, Blade, Tailwind CSS, JavaScript, MySQL",
     status: "Completed",
+    disclaimer: "Disclaimer: This showcased system is a demonstration build derived from an academic capstone project. All displayed names, logos, and records are fictional or modified for privacy, security, and portfolio presentation purposes. The system is intended to illustrate technical capabilities and project scope rather than represent an actual deployed library management solution.",
     image: "/lms-1.png",
     gallery: [
       "/lms-1.png",
@@ -78,7 +79,7 @@ const projectData = [
     role: "Company Project | Team Lead | Mentor",
     description: "An enterprise-grade task management platform for team collaboration, project tracking, and resource optimization. Built collaboratively under my technical mentorship, featuring workflow automation, real-time notifications, interactive Gantt and calendar visualizations, and intelligent task scheduling.",
     tech: "PHP, Laravel, Tailwind CSS, MySQL, Alpine.js",
-    status: "Beta Testing",
+    status: "Beta Testing Phase",
     credits: "Developed by OJT Interns - Junior Batch 2026 under my technical mentorship and supervision.",
     image: "/tms-1.png",
     gallery: [
@@ -151,9 +152,20 @@ const projectData = [
     role: "Company Project | Developer Collaborator",
     description: "An enterprise operations management system designed to support daily shipyard workflows across multiple branches. The platform manages vessel projects, job orders, inventory, procurement, financial operations, service tariffs, and wharf occupancy monitoring to streamline large-scale shipyard operations.",
     tech: "VB.NET, .NET Framework, SQL Server",
-    status: "Stabilization Phase",
-    image: "/ses1.jpeg",
-    gallery: ["/ses1.jpeg", "/ses2.jpeg"],
+    status: "Stabilization",
+    image: "/ses-1.png",
+    gallery: [
+      "/ses-1.png",
+      "/ses-2.1.png",
+      "/ses-3.png",
+      "/ses-4.png",
+      "/ses-5.png",
+      "/ses-6.png",
+      "/ses-7.1.png",
+      "/ses-8.png",
+      "/ses-9.png",
+      "/ses-10.png"
+    ],
     features: [
       "Vessel registry and operational tracking",
       "Ship work project management with ISO-related documentation workflows",
@@ -179,11 +191,91 @@ const projectData = [
     metrics: [
       { value: "9+", label: "Core Modules" },
       { value: "Multi", label: "Branch Support" },
-      { value: "4", label: "Modules Developed" }
+      { value: "3", label: "Modules Developed" }
     ],
     techStack: [
       { name: "VB.NET", category: "language" },
       { name: "SQL Yog", category: "database" }
+    ]
+  },
+  {
+    title: "ESS Sentinel",
+    role: "Internal Tool Development | Full Stack Developer",
+
+    description: `ESS Sentinel is a centralized enterprise support and infrastructure management platform 
+    designed to replace spreadsheet-based IT operations with a structured, searchable, and scalable web application. 
+    The system enables support engineers to manage clients, branches, devices, software systems, database instances, 
+    technical documentation, incidents, and troubleshooting knowledge from a single platform. 
+    Built using Laravel and FilamentPHP, the project focuses on real-world IT support workflows, maintainability, 
+    and clean system architecture while serving as a production-oriented portfolio project.`,
+
+    tech: "PHP, Laravel, FilamentPHP, Blade, Tailwind CSS, MySQL",
+
+    status: "Active Development",
+
+    disclaimer:
+            `ESS Sentinel is an enterprise support platform currently under active development. 
+            Information presented in this portfolio has been sanitized, anonymized, or represented using sample data to protect confidential operational and business information. 
+            This portfolio demonstrates the system's architecture, functionality, and technical implementation without exposing sensitive client or organizational data.`,
+    
+    image: "/ess-chart.png",
+
+    gallery: [
+      "/ess-chart.png",
+    ],
+
+    features: [
+      "Client & Branch Registry - Centralized management of supported organizations and branch locations",
+      "Infrastructure Asset Management - Track servers, workstations, terminals, and network devices",
+      "Database Instance Registry - Monitor database servers and deployed database instances",
+      "System Deployment Tracking - Record installed applications and software environments",
+      "Knowledge Base - Centralized repository for troubleshooting procedures and technical solutions",
+      "Incident Management - Record and monitor technical issues and resolution history",
+      "Technical Documentation Center - Store installation guides, network configurations, backup procedures, and operational documentation",
+      "Role-Based Access Control - Secure administrative access using Laravel Sanctum and Spatie Permission",
+      "Advanced Search, Sorting & Filtering - Fast retrieval of infrastructure and operational records",
+      "Soft Delete & Historical Data Preservation - Maintain recoverable records while preserving operational history"
+    ],
+
+    responsibilities: [
+      "Designed the complete enterprise relational database architecture",
+      "Developed the application using Laravel 12 and FilamentPHP",
+      "Implemented modular CRUD resources following scalable design principles",
+      "Architected entity relationships for clients, branches, infrastructure assets, and systems",
+      "Designed reusable resource structures using Filament Resources",
+      "Implemented validation, soft deletes, searching, sorting, and filtering",
+      "Maintained project documentation, Git version control, and iterative development roadmap"
+    ],
+
+    impact:
+      `ESS Sentinel is designed to streamline IT support operations by centralizing infrastructure information, 
+      reducing dependency on spreadsheets, improving documentation management, and preserving institutional knowledge through searchable technical records. 
+      The long-term vision is to provide a scalable enterprise support platform suitable for managed IT service providers and internal support teams.`,
+
+    metrics: [
+      { value: "10+", label: "Planned Modules" },
+      { value: "20+", label: "Database Tables" },
+      { value: "100%", label: "Custom Database Design" },
+      { value: "1", label: "Enterprise Platform" },
+      { value: "Ongoing", label: "Development" }
+    ],
+
+    techStack: [
+      { name: "PHP 8.2+", category: "language" },
+      { name: "Laravel 12", category: "framework" },
+      { name: "FilamentPHP 4", category: "framework" },
+      { name: "MySQL", category: "database" },
+      { name: "Blade", category: "frontend" },
+      { name: "Tailwind CSS", category: "frontend" },
+      { name: "Alpine.js", category: "frontend" },
+      { name: "Laravel Sanctum", category: "tool" },
+      { name: "Spatie Permission", category: "tool" },
+      { name: "Git", category: "tool" },
+      { name: "GitHub", category: "tool" },
+      { name: "Composer", category: "tool" },
+      { name: "Vite", category: "tool" },
+      { name: "Laravel Pint", category: "tool" },
+      { name: "PHPUnit", category: "tool" }
     ]
   },
 ];
@@ -222,7 +314,7 @@ export default function Projects() {
                   <span className="role-badge">{proj.role}</span>
                   <p className="description">{proj.description}</p>
                   
-                  <span className={`status-badge${proj.status === "Completed" ? " completed" : proj.status === "Ongoing" ? " ongoing" : proj.status === "Stabilization Phase" ? " stabilization" : ""}`}>
+                  <span className={`status-badge${proj.status === "Completed" ? " completed" : proj.status === "Ongoing" ? " ongoing" : proj.status === "Stabilization" ? " stabilization" : proj.status === "Beta Testing Phase" ? " beta-testing" : proj.status === "Active Development" ? " active-development" : ""}`}>
                     {proj.status}
                   </span>
 

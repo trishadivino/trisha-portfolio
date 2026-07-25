@@ -26,17 +26,20 @@ export default function ProjectModal({ project, onClose }) {
         {project.credits && (
           <p className="modal-credits">{project.credits}</p>
         )}
+         {project.disclaimer && (
+          <p className="modal-disclaimer">{project.disclaimer}</p>
+        )}
         
         {/* Image Gallery */}
-        {images.length > 1 && (
+        {images.length >= 1 && (
           <div className="image-gallery">
-            <button className="gallery-nav prev" onClick={prevImage}>‹</button>
+            {images.length > 1 && <button className="gallery-nav prev" onClick={prevImage}>‹</button>}
             <img
               src={images[currentImageIndex]}
               alt={`${project.title} screenshot ${currentImageIndex + 1}`}
               className="gallery-image"
             />
-            <button className="gallery-nav next" onClick={nextImage}>›</button>
+            {images.length > 1 && <button className="gallery-nav next" onClick={nextImage}>›</button>}
           </div>
         )}
 
