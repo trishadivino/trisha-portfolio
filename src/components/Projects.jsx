@@ -153,9 +153,9 @@ const projectData = [
     description: "An enterprise operations management system designed to support daily shipyard workflows across multiple branches. The platform manages vessel projects, job orders, inventory, procurement, financial operations, service tariffs, and wharf occupancy monitoring to streamline large-scale shipyard operations.",
     tech: "VB.NET, .NET Framework, SQL Server",
     status: "Stabilization",
-    image: "/ses-1.png",
+    image: "/ses-1.1.png",
     gallery: [
-      "/ses-1.png",
+      "/ses-1.1.png",
       "/ses-2.1.png",
       "/ses-3.png",
       "/ses-4.png",
@@ -163,7 +163,7 @@ const projectData = [
       "/ses-6.png",
       "/ses-7.1.png",
       "/ses-8.png",
-      "/ses-9.png",
+      "/ses-9.1.png",
       "/ses-10.png"
     ],
     features: [
