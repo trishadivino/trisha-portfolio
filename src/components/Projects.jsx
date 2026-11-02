@@ -37,7 +37,7 @@ const projectData = [
     category: "Freelance Project",
     role: "Solo Developer",
     status: "Deployed – Client Testing",
-    statusClass: ".status-testing",
+    statusClass: "status-testing",
     description:
       "A web-based academic monitoring system designed to help educational institutions manage academic records and monitor student performance, grades, attendance, and academic risk. It provides role-based interfaces for administrators, instructors, and students, with configurable academic settings and automated alerts to identify students who may require academic support.",
 
@@ -110,7 +110,7 @@ const projectData = [
     title: "ESS Sentinel",
     category: "Internal Company Project",
     role: "Solo Developer",
-    status: "Active Development ",
+    status: "Active Development",
     statusClass: "status-development",
     description:
       "An internal Infrastructure and Support Knowledge Management System developed to centralize client and branch records, installed devices, software deployments, technical incidents, and documented solutions. It also provides a centralized repository for supporting files such as PDFs, documents, images, and videos, helping technical support personnel manage infrastructure information and preserve troubleshooting knowledge.",
