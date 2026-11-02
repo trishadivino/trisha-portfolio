@@ -8,6 +8,7 @@ const projectData = [
     category: "Academic Project",
     role: "Main Developer",
     status: "Completed",
+    statusClass: "status-completed",
     description:
       "An enhanced web-based library management system developed from an academic capstone project. The application provides a centralized administrative workspace for managing library collections, book copies, circulation transactions, borrower records, financial obligations, and operational reports. It also includes staff access control, audit logging, and dashboard analytics to support library administration and monitoring. The enhanced version was developed separately and was not integrated into the institution's existing library system.",
     contributions: [
@@ -36,6 +37,7 @@ const projectData = [
     category: "Freelance Project",
     role: "Solo Developer",
     status: "Deployed – Client Testing",
+    statusClass: ".status-testing",
     description:
       "A web-based academic monitoring system designed to help educational institutions manage academic records and monitor student performance, grades, attendance, and academic risk. It provides role-based interfaces for administrators, instructors, and students, with configurable academic settings and automated alerts to identify students who may require academic support.",
 
@@ -72,6 +74,7 @@ const projectData = [
     category: "Internal Company Project",
     role: "Technical Mentor",
     status: "In Use",
+    statusClass: "status-in-use",
     description:
       "An internal web application used to organize tasks, monitor project progress, and support team coordination.",
     contributions: [
@@ -89,6 +92,7 @@ const projectData = [
     category: "Company Project",
     role: "Developer Collaborator",
     status: "Deployed & In Use",
+    statusClass: "status-deployed",
     description:
     "A comprehensive desktop-based enterprise management system designed to support end-to-end shipyard operations, covering inventory, warehouse management, asset tracking, equipment operations, job orders, project management, and financial processes.",
     contributions: [
@@ -107,6 +111,7 @@ const projectData = [
     category: "Internal Company Project",
     role: "Solo Developer",
     status: "Active Development ",
+    statusClass: "status-development",
     description:
       "An internal Infrastructure and Support Knowledge Management System developed to centralize client and branch records, installed devices, software deployments, technical incidents, and documented solutions. It also provides a centralized repository for supporting files such as PDFs, documents, images, and videos, helping technical support personnel manage infrastructure information and preserve troubleshooting knowledge.",
     contributions: [
@@ -148,13 +153,9 @@ function Projects() {
           <article className="project-card" key={index}>
             <div className="project-card-header">
               <span className="project-category">{project.category}</span>
-              <span
-                className={`project-status ${project.status
-                  .toLowerCase()
-                  .replaceAll(" ", "-")}`}
-              >
-                {project.status}
-              </span>
+              <span className={`project-status ${project.statusClass}`}>
+              {project.status}
+            </span>
             </div>
 
             <h3 className="project-title">{project.title}</h3>

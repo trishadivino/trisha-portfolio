@@ -207,4 +207,44 @@
   .project-card-header {
     align-items: flex-start;
   }
+
+  /* Project Status */
+  .project-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  /* Completed */
+  .status-completed {
+    background: rgba(13, 214, 192, 0.15);
+    color: #0dd6c0;
+  }
+
+  /* Deployed - Client Testing */
+  .status-testing {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffd166;
+  }
+
+  /* In Use */
+  .status-in-use {
+    background: rgba(72, 187, 120, 0.15);
+    color: #68d391;
+  }
+
+  /* Deployed and In Use */
+  .status-deployed {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+  }
+
+  /* Active Development */
+  .status-development {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+  }
 }
