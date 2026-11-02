@@ -106,7 +106,7 @@ const projectData = [
     title: "ESS Sentinel",
     category: "Internal Company Project",
     role: "Solo Developer",
-    status: "Development Paused",
+    status: "Active Development ",
     description:
       "An internal Infrastructure and Support Knowledge Management System developed to centralize client and branch records, installed devices, software deployments, technical incidents, and documented solutions. It also provides a centralized repository for supporting files such as PDFs, documents, images, and videos, helping technical support personnel manage infrastructure information and preserve troubleshooting knowledge.",
     contributions: [
