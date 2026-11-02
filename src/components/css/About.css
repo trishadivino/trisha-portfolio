@@ -1,73 +1,109 @@
-/* General About Section */
+
+/* GENERAL ABOUT SECTION */
+
 .about-section {
-  margin-top: 40px; 
+  position: relative;
+  margin-top: 0;
   min-height: 100vh;
-  padding: 60px 2rem 2rem;
-  background: #053a3e;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1600 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 Q400 200 800 120 T1600 150 V0 H0 Z' fill='%2300a093' opacity='0.25'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 100px 7% 80px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(13, 214, 192, 0.07),
+      transparent 40%
+    ),
+    #053a3e;
+}
+
+/* ABOUT HEADER */
+
+.about-header {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  color: #0dd6c0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
 .about-title {
+  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+}
+
+.about-title span {
+  color: #0dd6c0;
 }
 
 .about-description {
-  text-align: center;
-  margin-bottom: 3rem;
-  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
   color: #c0e8e5;
+  font-size: 1rem;
+  line-height: 1.9;
+  text-align: center;
 }
 
-/* Two-column layout */
+/* THREE-COLUMN LAYOUT */
+
 .about-content {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.1fr 1fr 0.85fr;
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-@media (min-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr 1fr;
-  }
+/* COLUMN CONTAINERS */
+
+.tech-stack,
+.work-skills,
+.soft-skills {
+  min-width: 0;
 }
 
-@media (min-width: 1024px) {
-  .about-content {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
+/* SECTION TITLES */
 
-/* Section Titles */
 .section-title {
+  color: #a0e0d8;
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+  letter-spacing: 0.5px;
 }
 
-/* Tech Stack */
+/* TECH STACK CATEGORIES */
+
 .tech-category {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.with-border {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+.tech-category:last-child {
+  border-bottom: none;
 }
 
 .category-title {
-  font-weight: 500;
-  margin-bottom: 0.75rem;
+  color: #c0e8e5;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-align: center;
+  margin: 0 0 1rem;
 }
 
-/* Logo Grid */
+/* TECHNOLOGY LOGOS */
+
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -81,57 +117,107 @@
   justify-content: center;
   width: 70px;
   height: 70px;
-  background-color: rgba(13, 214, 192, 0.1);
-  border: 1px solid rgba(13, 214, 192, 0.3);
+  padding: 5px;
+  overflow: hidden;
+  background-color: rgba(13, 214, 192, 0.08);
+  border: 1px solid rgba(13, 214, 192, 0.25);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .tech-logo-container:hover {
-  background-color: rgba(64, 229, 210, 0.2);
-  border-color: rgba(13, 214, 192, 0.5);
-  transform: translateY(-2px);
+  background-color: rgba(64, 229, 210, 0.18);
+  border-color: rgba(13, 214, 192, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(13, 214, 192, 0.1);
 }
 
 .tech-logo {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.tech-logo:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 8px #0dd6c0);
+.tech-logo-container:hover .tech-logo {
+  transform: scale(1.12);
 }
 
-/* Soft Skills */
+/* Text-Based Technology Logos */
+
+.tech-text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  color: #0dd6c0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* WORK AND SOFT SKILLS */
+
 .skills-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  color: #fff;
+  gap: 0.9rem;
+  color: #c0e8e5;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .skills-list li {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 0.7rem;
+  transition: 0.2s ease;
 }
 
 .skills-list li::before {
   content: "○";
-  color: #fff;
+  color: #0dd6c0;
   font-weight: bold;
-  margin-top: 2px;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
-/* Responsive */
+.skills-list li:hover {
+  color: #0dd6c0;
+  transform: translateX(4px);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .tech-stack {
+    grid-column: 1 / -1;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 70px));
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
-    padding: 60px 1rem 2rem;
+    padding: 80px 6% 60px;
+  }
+
+  .about-header {
+    margin-bottom: 3rem;
   }
 
   .about-title {
@@ -139,17 +225,32 @@
   }
 
   .about-description {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
+    font-size: 0.93rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .tech-stack {
+    grid-column: auto;
   }
 
   .section-title {
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 0.85rem;
   }
 
   .logo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(55px, 65px));
+    gap: 10px;
   }
 
   .tech-logo-container {
@@ -158,27 +259,41 @@
   }
 
   .tech-logo {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .skills-list {
     font-size: 0.9rem;
+    gap: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 75px 5% 50px;
+  }
+
   .about-title {
     font-size: 1.8rem;
   }
 
+  .about-description {
+    font-size: 0.88rem;
+  }
+
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
   }
 
   .tech-logo-container {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
   }
 
   .tech-logo {
@@ -186,8 +301,17 @@
     height: 32px;
   }
 
-  .logo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    gap: 6px;
+  .skills-list {
+    font-size: 0.86rem;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-logo-container,
+  .tech-logo,
+  .skills-list li {
+    transition: none;
   }
 }

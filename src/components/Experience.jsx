@@ -4,17 +4,20 @@ const experienceData = [
   {
     position: "Support Programmer",
     company: "Emergence Systems and Solutions, Inc.",
-    address: "Baliwasan, Zamboanga City",
+    address: "One Campaner, Zamboanga City",
     years: "February 2025 – Present",
-    summary: "Promoted role focused on development, system stabilization, and team leadership.",
-    techStack: ["PHP", "Laravel", "VB.NET", "MySQL", "SQL Server"],
+    summary: "Focused on business application development, system enhancement, implementation, and technical coordination.",
+    techStack: ["PHP", "Laravel", "VB.NET", "MySQL", "SQL"],
     duties: [
-      "Led implementation team and assisted support personnel in SME system deployment and onboarding.",
-      "Documented client customization requests and coordinated with the development team.",
-      "Stabilized legacy PHP Shipyard Management System and optimized financial modules.",
-      "Contributed to the migration from PHP to VB.NET for the Shipyard Enterprise System.",
-      "Developed internal Laravel systems including the Error Registry System (ongoing).",
-      "Led the Task Management System project: trained OJTs on Laravel fundamentals, designed the database structure, and handled system testing and requirement documentation based on stakeholder feedback."
+      "Develop and enhance business applications and internal systems using PHP, Laravel, VB.NET, and MySQL.",
+      "Develop new forms and modules for legacy desktop applications while following existing coding standards and system architecture.",
+      "Investigate escalated technical issues by reproducing errors, reviewing application behavior, and validating database records.",
+      "Contribute to the migration of a legacy PHP-based Shipyard Management System into a VB.NET desktop application.",
+      "Gather and document client requirements, coordinate enhancement requests, and collaborate with the development team.",
+      "Conduct software testing, validate system changes, assist with deployment, and gather client feedback.",
+      "Coordinate client implementations, including deployment schedules, system setup, user training, and technical readiness.",
+      "Prepare demonstration environments and assist the Sales team during software presentations.",
+      "Mentor OJTs in Laravel development and provide technical guidance for the internal Task Management System, including database planning, testing, and documentation."
     ]
   },
   {
@@ -22,14 +25,15 @@ const experienceData = [
     company: "Emergence Systems and Solutions, Inc.",
     address: "Baliwasan, Zamboanga City",
     years: "June 2023 – February 2025",
-    summary: "Entry-level role handling client-facing technical support and system deployment.",
-    techStack: ["PHP", "MySQL", "Excel", "SQL"],
+    summary: "Handled client-facing technical support, software deployment, troubleshooting, and user assistance.",
+    techStack: ["PHP", "MySQL", "SQL", "Excel"],
     duties: [
-      "Installed and deployed SME systems for multiple clients across the region.",
-      "Conducted user training and onboarding sessions for new client teams.",
-      "Provided first-line technical troubleshooting support for production systems.",
-      "Managed data migration and optimized bulk database imports for client transitions.",
-      "Streamlined workflow efficiency and improved overall system adoption rates."
+      "Installed, configured, and deployed business applications for clients across different industries.",
+      "Provided first-line technical support by investigating software issues, reproducing errors, and applying appropriate solutions.",
+      "Performed database investigations, data validation, and bulk data migration during client system transitions.",
+      "Assisted clients with system onboarding and conducted user training for business applications.",
+      "Documented recurring technical issues and troubleshooting procedures for support reference.",
+      "Escalated complex application issues to the development team and coordinated follow-ups with clients."
     ]
   }
 ];
@@ -37,37 +41,49 @@ const experienceData = [
 function Experience() {
   return (
     <section id="experience" className="experience-section">
-      <h2 className="section-title">Work Experience</h2>
+      <div className="experience-header-section">
+        <span className="experience-eyebrow">CAREER JOURNEY</span>
+        <h2 className="experience-title">Work Experience</h2>
+        <p className="experience-intro">
+          My professional experience in software development, application
+          support, and business system implementation.
+        </p>
+      </div>
 
       <div className="experience-container">
         {experienceData.map((exp, index) => (
-          <div key={index} className="experience-card">
-            <div className="experience-header">
-              <h3>{exp.position}</h3>
+          <article key={index} className="experience-card">
+            <div className="experience-card-top">
+              <span className="experience-role-label">
+                {index === 0 ? "CURRENT ROLE" : "PREVIOUS ROLE"}
+              </span>
+              <span className="experience-years">{exp.years}</span>
             </div>
-            <div>
-              <span className="years">{exp.years}</span>
-            </div>
 
-            <p className="company">{exp.company}</p>
-            <p className="address">{exp.address}</p>
+            <h3 className="experience-position">{exp.position}</h3>
 
-            {exp.summary && <p className="role-summary">{exp.summary}</p>}
+            <p className="experience-company">{exp.company}</p>
+            <p className="experience-address">{exp.address}</p>
 
-            {exp.techStack && (
-              <div className="exp-tech-stack">
-                {exp.techStack.map((tech, i) => (
-                  <span key={i} className="exp-tech-tag">{tech}</span>
-                ))}
-              </div>
-            )}
+            <p className="experience-summary">{exp.summary}</p>
 
-            <ul className="duties">
-              {exp.duties.map((duty, i) => (
-                <li key={i}>{duty}</li>
+            <div className="experience-tech-stack">
+              {exp.techStack.map((tech, i) => (
+                <span key={i} className="experience-tech-tag">
+                  {tech}
+                </span>
               ))}
-            </ul>
-          </div>
+            </div>
+
+            <div className="experience-responsibilities">
+              <h4>Key Responsibilities</h4>
+              <ul>
+                {exp.duties.map((duty, i) => (
+                  <li key={i}>{duty}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
         ))}
       </div>
     </section>

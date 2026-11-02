@@ -1,140 +1,66 @@
-import { useState } from "react";
 import "./css/ProjectModal.css";
 
 export default function ProjectModal({ project, onClose }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   if (!project) return null;
-
-  const images = project.gallery || [project.image];
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>×</button>
-        
-        <h2 className="modal-title">{project.title}</h2>
-        <span className="modal-role">{project.role}</span>
-        {project.credits && (
-          <p className="modal-credits">{project.credits}</p>
-        )}
-         {project.disclaimer && (
-          <p className="modal-disclaimer">{project.disclaimer}</p>
-        )}
-        
-        {/* Image Gallery */}
-        {images.length >= 1 && (
-          <div className="image-gallery">
-            {images.length > 1 && <button className="gallery-nav prev" onClick={prevImage}>‹</button>}
-            <img
-              src={images[currentImageIndex]}
-              alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-              className="gallery-image"
-            />
-            {images.length > 1 && <button className="gallery-nav next" onClick={nextImage}>›</button>}
-          </div>
-        )}
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          className="modal-close"
+          onClick={onClose}
+          aria-label="Close project details"
+        >
+          ×
+        </button>
 
-        {/* Gallery Dots */}
-        {images.length > 1 && (
-          <div className="gallery-dots">
-            {images.map((_, idx) => (
-              <span
-                key={idx}
-                className={`dot ${idx === currentImageIndex ? 'active' : ''}`}
-                onClick={() => setCurrentImageIndex(idx)}
-              />
-            ))}
-          </div>
-        )}
+        <span className="modal-category">{project.category}</span>
 
-        {/* Project Details */}
+        <h2 className="modal-title" id="modal-title">
+          {project.title}
+        </h2>
+
+        <p className="modal-role">{project.role}</p>
+
+        <span
+          className={`modal-status ${project.status
+            .toLowerCase()
+            .replaceAll(" ", "-")}`}
+        >
+          {project.status}
+        </span>
+
         <div className="modal-details">
-          <div className="detail-section">
-            <h3>Overview</h3>
+          <div className="modal-detail-section">
+            <h3>Project Overview</h3>
             <p>{project.description}</p>
           </div>
 
-          {project.features && project.features.length > 0 && (
-            <div className="detail-section">
-              <h3>Key Features</h3>
-              <ul className="feature-list">
-                {project.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <div className="modal-detail-section">
+            <h3>My Contributions</h3>
+            <ul>
+              {project.contributions.map((contribution, index) => (
+                <li key={index}>{contribution}</li>
+              ))}
+            </ul>
+          </div>
 
-          {project.responsibilities && project.responsibilities.length > 0 && (
-            <div className="detail-section">
-              <h3>My Responsibilities</h3>
-              <ul className="feature-list">
-                {project.responsibilities.map((resp, idx) => (
-                  <li key={idx}>{resp}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {project.impact && (
-            <div className="detail-section">
-              <h3>Impact & Results</h3>
-              <p>{project.impact}</p>
-            </div>
-          )}
-
-          {project.metrics && (
-            <div className="detail-section">
-              <h3>Project Metrics</h3>
-              <div className="metrics-grid">
-                {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="metric-item">
-                    <span className="metric-value">{metric.value}</span>
-                    <span className="metric-label">{metric.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <div className="detail-section">
-            <h3>Tech Stack</h3>
-            <div className="tech-stack-badges">
-              {project.techStack && project.techStack.map((tech, idx) => (
-                <span key={idx} className={`tech-badge ${tech.category}`}>
-                  {tech.name}
+          <div className="modal-detail-section">
+            <h3>Technology Stack</h3>
+            <div className="modal-tech-stack">
+              {project.techStack.map((tech, index) => (
+                <span key={index} className="modal-tech-tag">
+                  {tech}
                 </span>
               ))}
             </div>
           </div>
-
-          {project.links && project.links.length > 0 && (
-            <div className="detail-section">
-              <h3>Links</h3>
-              <div className="project-links">
-                {project.links.map((link, idx) => (
-                  <a 
-                    key={idx} 
-                    href={link.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="link-button"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

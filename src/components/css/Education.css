@@ -1,190 +1,289 @@
+
+/* EDUCATION SECTION */
+
 .education-section {
-  padding: 60px 2rem 4rem;
-  background: #053a3e;
+  position: relative;
   min-height: 100vh;
+  padding: 100px 7% 80px;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(13, 214, 192, 0.05),
+      transparent 45%
+    ),
+    #053a3e;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+/* Section Header */
+
+.education-header {
+  max-width: 750px;
+  margin: 0 auto 4rem;
   text-align: center;
-  margin-bottom: 3rem;
-  color: #c0e8e5;
 }
+
+.education-eyebrow {
+  display: inline-block;
+  color: #0dd6c0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.education-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1.2rem;
+}
+
+.education-intro {
+  color: #c0e8e5;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Timeline */
 
 .timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: 4px;
-  background-color: #00a093;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    #0dd6c0,
+    rgba(13, 214, 192, 0.15)
+  );
   top: 0;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* Timeline Items */
+
 .timeline-item {
-  padding: 1rem 2rem;
   position: relative;
   width: 50%;
-  box-sizing: border-box;
+  padding: 1rem 2.5rem;
 }
 
 .timeline-item.left {
   left: 0;
   text-align: right;
-  padding-right: 2rem;
 }
 
 .timeline-item.right {
   left: 50%;
   text-align: left;
-  padding-left: 2rem;
 }
 
+/* Timeline Markers */
+
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  right: -10px;
-  background-color: #00a093;
-  border: 4px solid #fff;
-  top: 1rem;
+  width: 16px;
+  height: 16px;
+  top: 2rem;
+  right: -8px;
+  background: #0dd6c0;
+  border: 4px solid #053a3e;
   border-radius: 50%;
-  z-index: 1;
+  box-shadow: 0 0 12px rgba(13, 214, 192, 0.5);
+  z-index: 2;
 }
 
 .timeline-item.right::before {
-  left: -10px;
+  left: -8px;
   right: auto;
 }
 
+/* Timeline Cards */
+
 .timeline-content {
-  background-color: rgba(0, 160, 147, 0.1);
-  padding: 1rem 1.5rem;
+  position: relative;
+  padding: 1.5rem;
+  background: rgba(13, 214, 192, 0.06);
+  border: 1px solid rgba(13, 214, 192, 0.2);
   border-radius: 10px;
-  border: 1px solid rgba(0, 160, 147, 0.3);
   color: #c0e8e5;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.timeline-item:hover .timeline-content {
+.timeline-content:hover {
   transform: translateY(-5px);
+  background: rgba(13, 214, 192, 0.1);
+  border-color: rgba(13, 214, 192, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Education Details */
+
+.education-level {
+  display: inline-block;
+  color: #0dd6c0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
 }
 
 .timeline-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+
+.education-specialization {
+  color: #0dd6c0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem;
 }
 
 .timeline-content .school {
-  font-weight: 500;
-  margin-bottom: 0.25rem;
+  color: #c0e8e5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.timeline-content .location {
+  color: #a0d4cf;
+  font-size: 0.82rem;
+  margin: 0 0 0.5rem;
 }
 
 .timeline-content .years {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
-.timeline-content .note {
-  font-weight: bold;
-  color: #00f0c0;
-}
-
-.timeline-content .highlights {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(0, 160, 147, 0.3);
+  color: #a0d4cf;
   font-size: 0.85rem;
   font-style: italic;
-  color: #a0d8d2;
-  line-height: 1.5;
+  margin: 0 0 0.8rem;
 }
 
-.education-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  color: #c0e8e5;
+/* Academic Recognition */
+
+.education-award {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  background: rgba(13, 214, 192, 0.12);
+  border: 1px solid rgba(13, 214, 192, 0.3);
+  border-radius: 20px;
+  color: #0dd6c0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Academic Highlights */
+
+.education-highlights {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(13, 214, 192, 0.2);
+}
+
+.education-highlights p {
+  color: #a0d4cf;
+  font-size: 0.8rem;
   line-height: 1.6;
+  margin: 0 0 0.5rem;
 }
 
-/* Responsive */
+/* Responsive Design */
+
 @media (max-width: 768px) {
   .education-section {
-    padding: 60px 1rem 2rem;
+    padding: 80px 6% 60px;
   }
 
-  .section-title {
+  .education-header {
+    margin-bottom: 3rem;
+  }
+
+  .education-title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+  }
+
+  .education-intro {
+    font-size: 0.93rem;
   }
 
   .timeline {
-    padding: 0 0.5rem;
+    padding: 0;
   }
 
   .timeline::after {
-    left: 20px;
+    left: 10px;
   }
 
-  .timeline-item {
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 1rem;
-    text-align: left !important;
+    left: 0;
+    padding: 0 0 2rem 2.5rem;
+    text-align: left;
   }
 
-  .timeline-item::before {
-    left: 10px !important;
+  .timeline-item::before,
+  .timeline-item.right::before {
+    left: 2px;
     right: auto;
+    top: 1.8rem;
   }
 
   .timeline-content {
-    padding: 0.8rem 1rem;
+    padding: 1.2rem;
   }
 
   .timeline-content h3 {
     font-size: 1.1rem;
   }
-
-  .timeline-content .school,
-  .timeline-content .years,
-  .timeline-content .note {
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .section-title {
+  .education-section {
+    padding: 75px 5% 50px;
+  }
+
+  .education-title {
     font-size: 1.8rem;
   }
 
-  .timeline-item {
-    padding-left: 2.5rem;
+  .education-intro {
+    font-size: 0.88rem;
   }
 
   .timeline::after {
-    left: 15px;
+    left: 8px;
   }
 
-  .timeline-item::before {
-    left: 8px !important;
-    width: 16px;
-    height: 16px;
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 2rem;
+  }
+
+  .timeline-item::before,
+  .timeline-item.right::before {
+    left: 0;
+    width: 14px;
+    height: 14px;
   }
 
   .timeline-content {
-    padding: 0.6rem 0.8rem;
+    padding: 1rem;
   }
 
   .timeline-content h3 {
@@ -192,8 +291,19 @@
   }
 
   .timeline-content .school,
-  .timeline-content .years,
-  .timeline-content .note {
-    font-size: 0.85rem;
+  .timeline-content .location {
+    font-size: 0.82rem;
+  }
+
+  .education-highlights p {
+    font-size: 0.76rem;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-content {
+    transition: none;
   }
 }
